@@ -1,0 +1,24 @@
+{
+  "name": "sprak3000/anime-news-network-data-api",
+  "description": "A PHP client library for Anime News Network data",
+  "authors": [
+    {
+      "name": "Luis Cruz",
+      "email": "sprak3000+github@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "guzzlehttp/guzzle": "4.2.*",
+    "guzzlehttp/guzzle-services": "0.3.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4"
+  },
+  "autoload": {
+    "psr-4": {
+      "sprak3000\\": "src/sprak3000/",
+      "sprak3000\\AnimeNewsNetworkDataAPI\\Test\\": "test/phpunit/"
+    }
+  }
+}
