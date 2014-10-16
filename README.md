@@ -6,6 +6,12 @@ This is a PHP client wrapper for the [Anime News Network](http://www.animenewsne
 API. If you are interested in contributing back to this project, feel free to read the *Contributing* documentation
 below.
 
+**NOTE:** 
+Using this client to retrieve data, you must still abide by the ANN API terms of service:
+
+"When using this API to display information on a public website, you must list Anime News Network as the
+source of the data and link to Anime News Network on every page that incorporates data from the API."
+
 Usage
 -----
 ```php

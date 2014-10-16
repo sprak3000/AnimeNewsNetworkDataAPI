@@ -13,7 +13,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
    */
   public function testClientCreated()
   {
-    $client = new AnimeNewsNetworkDataAPI\Client();
+    $client = new Client();
 
     $this->assertInstanceOf( 'sprak3000\AnimeNewsNetworkDataAPI\Client', $client );
   }
