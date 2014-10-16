@@ -33,6 +33,6 @@ class ClientTest extends PHPUnit_Framework_TestCase
 
     $this->assertInstanceOf( 'GuzzleHttp\Url', $base );
     $this->assertEquals( 'cdn.animenewsnetwork.com', $host );
-    $this->assertEquals( 'http://cdn.animenewsnetwork.com/encyclopedia', $uri );
+    $this->assertEquals( 'http://cdn.animenewsnetwork.com/encyclopedia/api.xml', $uri );
   }
 }
