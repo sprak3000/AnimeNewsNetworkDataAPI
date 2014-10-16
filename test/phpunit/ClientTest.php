@@ -1,7 +1,7 @@
 <?php
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test;
 
-use sprak3000\AnimeNewsNetworkDataAPI;
+use sprak3000\AnimeNewsNetworkDataAPI\Client;
 use PHPUnit_Framework_TestCase;
 
 class ClientTest extends PHPUnit_Framework_TestCase
@@ -25,7 +25,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
    */
   public function testClientServiceDescriptionBaseUrlValue()
   {
-    $client = new sprak3000\AnimeNewsNetworkDataAPI\Client();
+    $client = new Client();
 
     $base = $client->getDescription()->getBaseUrl();
     $uri = $client->getDescription()->getData('baseUrl');
