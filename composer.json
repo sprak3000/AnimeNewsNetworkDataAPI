@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "sprak3000\\AnimeNewsNetworkDataAPI\\": "src/sprak3000/AnimeNewsNetworkDataAPI/",
+      "sprak3000\\AnimeNewsNetworkDataAPI\\": "src",
       "sprak3000\\AnimeNewsNetworkDataAPI\\Test\\": "test/phpunit/"
     }
   }
