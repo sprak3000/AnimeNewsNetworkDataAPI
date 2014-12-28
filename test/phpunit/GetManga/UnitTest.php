@@ -3,7 +3,7 @@ namespace sprak3000\AnimeNewsNetworkDataAPI\Test\GetManga;
 
 use PHPUnit_Framework_TestCase;
 use sprak3000\AnimeNewsNetworkDataAPI\Test\DebugClient;
-use sprak3000\AnimeNewsNetworkDataAPI\Test\Mock\Adapter;
+use sprak3000\AnimeNewsNetworkDataAPI\Test\Mock\Handler;
 
 class UnitTest extends PHPUnit_Framework_TestCase
 {
@@ -21,9 +21,9 @@ class UnitTest extends PHPUnit_Framework_TestCase
    */
   public function testGetManga()
   {
-    $adapter = new Adapter();
+    $handler = new Handler();
 
-    $client = new DebugClient(DebugClient::DEFAULT_API_URL, $adapter);
+    $client = new DebugClient(DebugClient::DEFAULT_API_URL, ['handler' => $handler]);
 
     /** @var \GuzzleHttp\Command\Model $result */
     $client->getManga(['manga' => self::MANGA_ID]);
