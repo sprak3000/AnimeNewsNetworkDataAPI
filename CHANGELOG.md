@@ -7,6 +7,8 @@ requiring a change in how the test framework behaves (uses new MockHandler class
 `sprak3000\AnimeNewsNetworkDataAPI\Client` works. It now takes an array of Guzzle options; for the testing framework,
 this means we pass `['handler' => $mockHandler]` in as the second parameter.
 
+Also, the result returned by the API is now an array; you no longer need to call `toArray()`.
+
 ## 0.3.0
 
 Proper PSR4 fix. 
