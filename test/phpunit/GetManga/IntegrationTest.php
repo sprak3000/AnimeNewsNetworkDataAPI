@@ -45,9 +45,7 @@ class IntegrationTest extends PHPUnit_Framework_TestCase
       $this->assertArrayHasKey(Property::KEY_RELEASE, $pManga[Property::KEY_MANGA]);
     };
 
-    $manga = $result->toArray();
-
-    $checkKeys($manga);
+    $checkKeys($result);
   }
 
   /**
@@ -67,8 +65,6 @@ class IntegrationTest extends PHPUnit_Framework_TestCase
     /** @var \GuzzleHttp\Command\Model $result */
     $result = $client->getManga(['manga' => self::INVALID_MANGA_ID]);
 
-    $manga = $result->toArray();
-
-    $this->assertArrayHasKey(Property::KEY_WARNING, $manga);
+    $this->assertArrayHasKey(Property::KEY_WARNING, $result);
   }
 }

@@ -17,8 +17,8 @@ Usage
 ```php
 <?php
 $client = new sprak3000\AnimeNewsNetworkDataAPI\Client();
-$anime = $client->getAnime(['anime' => '16148'])->toArray();
-$manga = $client->getManga(['manga' => '4199'])->toArray();
+$anime = $client->getAnime(['anime' => '16148']);
+$manga = $client->getManga(['manga' => '4199']);
 ```
 
 ### Errors

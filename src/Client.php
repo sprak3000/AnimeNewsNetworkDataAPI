@@ -3,7 +3,6 @@ namespace sprak3000\AnimeNewsNetworkDataAPI;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client as HttpClient;
-use GuzzleHttp\Adapter\AdapterInterface;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Model;
@@ -25,20 +24,13 @@ class Client extends GuzzleClient
    * Constructor
    *
    * @param string $pApiUrl Base API URL
-   * @param AdapterInterface $pAdapter
+   * @param array $pOptions
    *
    * @throws InvalidArgumentException
    */
-  public function __construct($pApiUrl = self::DEFAULT_API_URL, AdapterInterface $pAdapter = null)
+  public function __construct($pApiUrl = self::DEFAULT_API_URL, $pOptions = [])
   {
-    // Setup the client options
-    $options = array ();
-
-    if ( null !== $pAdapter && $pAdapter instanceof AdapterInterface) {
-      $options['adapter'] = $pAdapter;
-    }
-
-    parent::__construct($this->CreateHttpClient( $options ), $this->ConfigureResourceDescriptions($pApiUrl));
+    parent::__construct($this->CreateHttpClient( $pOptions ), $this->ConfigureResourceDescriptions($pApiUrl));
   }
 
   protected function CreateHttpClient( $pOptions = [] )

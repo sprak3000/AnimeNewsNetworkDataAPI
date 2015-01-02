@@ -47,9 +47,7 @@ class IntegrationTest extends PHPUnit_Framework_TestCase
       $this->assertArrayHasKey(Property::KEY_CREDIT, $pAnime[Property::KEY_ANIME]);
     };
 
-    $anime = $result->toArray();
-
-    $checkKeys($anime);
+    $checkKeys($result);
   }
 
   /**
@@ -69,8 +67,6 @@ class IntegrationTest extends PHPUnit_Framework_TestCase
     /** @var \GuzzleHttp\Command\Model $result */
     $result = $client->getAnime(['anime' => self::INVALID_ANIME_ID]);
 
-    $anime = $result->toArray();
-
-    $this->assertArrayHasKey(Property::KEY_WARNING, $anime);
+    $this->assertArrayHasKey(Property::KEY_WARNING, $result);
   }
 }
