@@ -12,4 +12,5 @@ class AbstractProperty
   const KEY_ATTRIBUTES = '@attributes';
   const KEY_VALUE = 'value';
   const KEY_WARNING = 'warning';
+  const KEY_RATINGS = 'ratings';
 }

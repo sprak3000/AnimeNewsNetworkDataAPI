@@ -45,6 +45,7 @@ class IntegrationTest extends PHPUnit_Framework_TestCase
       $this->assertArrayHasKey(Property::KEY_STAFF, $pAnime[Property::KEY_ANIME]);
       $this->assertArrayHasKey(Property::KEY_CAST, $pAnime[Property::KEY_ANIME]);
       $this->assertArrayHasKey(Property::KEY_CREDIT, $pAnime[Property::KEY_ANIME]);
+      $this->assertArrayHasKey(Property::KEY_RATINGS, $pAnime[Property::KEY_ANIME]);
     };
 
     $checkKeys($result);
