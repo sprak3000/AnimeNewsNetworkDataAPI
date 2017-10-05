@@ -7,7 +7,7 @@ php:
 install:
 - composer install
 script:
-- phpunit --bootstrap test/phpunit/bootstrap.php test/phpunit/
+- ./vendor/bin/phpunit --bootstrap test/phpunit/bootstrap.php test/phpunit/
 notifications:
   on_success: never
   on_failure: always
