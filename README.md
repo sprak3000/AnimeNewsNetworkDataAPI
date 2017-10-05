@@ -1,4 +1,4 @@
-#Anime News Network Data Client
+# Anime News Network Data Client
 [![Build Status](http://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI.svg)](http://github.com/sprak3000/AnimeNewsNetworkDataAPI)
 
 This is a PHP client wrapper for the [Anime News Network](http://www.animenewsnetwork.com/encyclopedia/api.php) data
@@ -11,7 +11,7 @@ Using this client to retrieve data, you must still abide by the ANN API terms of
 "When using this API to display information on a public website, you must list Anime News Network as the
 source of the data and link to Anime News Network on every page that incorporates data from the API."
 
-##Usage
+## Usage
 ```php
 <?php
 $client = new sprak3000\AnimeNewsNetworkDataAPI\Client();
@@ -19,28 +19,28 @@ $anime = $client->getAnime(['anime' => '16148']);
 $manga = $client->getManga(['manga' => '4199']);
 ```
 
-###Errors
+### Errors
 
 Unfortunately, the ANN API does not return a non 200 HTTP response code for an invalid / not found ID. To check for an
 error, look for a `warning` key in the result array.
 
-###Known Limitations / Issues
+### Known Limitations / Issues
 None at this time.
 
-##Installing via Composer
+## Installing via Composer
 ```
 composer require sprak3000/AnimeNewsNetworkDataAPI
 ```
 
-##Travis CI
+## Travis CI
 
 This project uses [Travis CI](https://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI) for build and continuous integration.
 
-##Documentation
+## Documentation
 
 All documentation can be found in the [doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc) folder.
 
-##Contributing
+## Contributing
 
 * [Getting Started](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md)
 * [Bug Reports](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#bug-reports)
