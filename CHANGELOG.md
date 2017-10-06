@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.0.0
+This release moves the library into using PHP 7:
+
+* Upgrade of Guzzle, Guzzle Services dependencies
+* Upgrade of phpunit development dependency
+* Code and tests updated for changes in dependencies 
+* Code style updated to adhere to [PSR-2](http://www.php-fig.org/psr/psr-2/)
+* Other code polish items to modernize the code base, e.g., type hints
+
 ## 0.4.1
 
 Updating `Enum\AbstractProperty` to include a key for the ratings data. Integration tests updated accordingly.

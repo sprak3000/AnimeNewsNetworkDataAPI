@@ -1,13 +1,15 @@
 <?php
+
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test;
 
 use sprak3000\AnimeNewsNetworkDataAPI\Client;
-use GuzzleHttp\Subscriber\History;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Middleware;
 
 /**
  * Class DebugClient
  *
- * This Client is meant to set up the Subscriber History listener. This
+ * This Client is meant to set up the History middleware. This
  * can then be used to retrieve the service response which is useful for
  * building Mocks.
  *
@@ -15,23 +17,28 @@ use GuzzleHttp\Subscriber\History;
  */
 class DebugClient extends Client
 {
-  /**
-   * @var History $mHistory
-   */
-  public $mHistory;
+    /**
+     * @var History $mHistory
+     */
+    public $mHistory;
 
-  /**
-   * @param array $pOptions
-   *
-   * @return \GuzzleHttp\Client
-   */
-  protected function CreateHttpClient($pOptions=[])
-  {
-    $client = parent::CreateHttpClient($pOptions);
+    public $mContainer = [];
 
-    $this->mHistory = new History();
-    $client->getEmitter()->attach($this->mHistory);
+    /**
+     * @param array $pOptions
+     *
+     * @return \GuzzleHttp\Client
+     */
+    protected function CreateHttpClient(array $pOptions = []): \GuzzleHttp\Client
+    {
+        $mock = array_key_exists('mock', $pOptions) ? $pOptions['mock'] : null;
 
-    return $client;
-  }
+        $this->mHistory = Middleware::history($this->mContainer);
+        $stack = HandlerStack::create($mock);
+        $stack->push($this->mHistory);
+
+        $pOptions['handler'] = $stack;
+
+        return parent::CreateHttpClient($pOptions);
+    }
 }
