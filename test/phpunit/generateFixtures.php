@@ -98,6 +98,6 @@ echo "Generating manga fixture data. \r\n";
 echo "================================\r\n\r\n";
 
 foreach ($mangaIds as $mangaId) {
-    $result = $client->getManga(['manga' => $mangaId]);
-    $writeFile(json_encode($result), 'manga', $mangaId)->toArray();
+    $result = $client->getManga(['manga' => $mangaId])->toArray();
+    $writeFile(json_encode($result), 'manga', $mangaId);
 }
