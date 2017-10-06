@@ -1,35 +1,38 @@
 <?php
+
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test\GetManga;
 
-use PHPUnit_Framework_TestCase;
+use \PHPUnit\Framework\TestCase;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
 use sprak3000\AnimeNewsNetworkDataAPI\Test\DebugClient;
-use sprak3000\AnimeNewsNetworkDataAPI\Test\Mock\Handler;
 
-class UnitTest extends PHPUnit_Framework_TestCase
+class UnitTest extends TestCase
 {
-  const MANGA_ID = '1632';
+    const MANGA_ID = '1632';
 
-  /**
-   * Given: A user querying the API
-   * When: API is queried for a specific title
-   * Then: Expect a 200 response
-   *
-   * @group Unit
-   * @group internet
-   * @small
-   *
-   */
-  public function testGetManga()
-  {
-    $handler = new Handler();
+    /**
+     * Given: A user querying the API
+     * When: API is queried for a specific title
+     * Then: Expect a 200 response
+     *
+     * @group Unit
+     * @group internet
+     * @small
+     *
+     */
+    public function testGetManga()
+    {
+        $mock = new MockHandler([
+            new Response(200, [], '<foo></foo>'),
+        ]);
 
-    $client = new DebugClient(DebugClient::DEFAULT_API_URL, ['handler' => $handler]);
+        $client = new DebugClient(DebugClient::DEFAULT_API_URL, ['mock' => $mock]);
+        $client->getManga(['manga' => self::MANGA_ID]);
 
-    /** @var \GuzzleHttp\Command\Model $result */
-    $client->getManga(['manga' => self::MANGA_ID]);
+        $response = $client->mContainer[0]['response'];
 
-    $response = $client->mHistory->getLastResponse();
-
-    $this->assertEquals('200', $response->getStatusCode());
-  }
+        $this->assertEquals('200', $response->getStatusCode());
+    }
 }

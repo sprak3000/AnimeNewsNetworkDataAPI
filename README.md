@@ -6,17 +6,21 @@ API. If you are interested in contributing back to this project, feel free to re
 below.
 
 **NOTE:** 
-Using this client to retrieve data, you must still abide by the ANN API terms of service:
+When using this client to retrieve data, you must still abide by the ANN API terms of service:
 
-"When using this API to display information on a public website, you must list Anime News Network as the
-source of the data and link to Anime News Network on every page that incorporates data from the API."
+> When using this API to display information on a public website, you must list Anime News Network as the
+source of the data and link to Anime News Network on every page that incorporates data from the API.
+
+## Requires
+* PHP 7
+* [Composer](https://getcomposer.org/) (to install this library)
 
 ## Usage
 ```php
 <?php
 $client = new sprak3000\AnimeNewsNetworkDataAPI\Client();
-$anime = $client->getAnime(['anime' => '16148']);
-$manga = $client->getManga(['manga' => '4199']);
+$anime = $client->getAnime(['anime' => '16148'])->toArray();
+$manga = $client->getManga(['manga' => '4199'])->toArray();
 ```
 
 ### Errors
