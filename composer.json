@@ -12,7 +12,7 @@
     "url": "http://github.com/sprak3000/guzzle-services"
   }],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.2",
     "guzzlehttp/guzzle": "6.*",
     "guzzlehttp/guzzle-services": "1.*"
   },

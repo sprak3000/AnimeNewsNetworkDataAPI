@@ -1,5 +1,7 @@
 # Anime News Network Data Client
-[![Build Status](http://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI.svg)](http://github.com/sprak3000/AnimeNewsNetworkDataAPI)
+[![Build Status](https://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI.svg?branch=master)](https://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/maintainability)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/test_coverage)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/test_coverage)
 
 This is a PHP client wrapper for the [Anime News Network](http://www.animenewsnetwork.com/encyclopedia/api.php) data
 API. If you are interested in contributing back to this project, feel free to read the *Contributing* documentation
@@ -12,7 +14,7 @@ When using this client to retrieve data, you must still abide by the ANN API ter
 source of the data and link to Anime News Network on every page that incorporates data from the API.
 
 ## Requires
-* PHP 7
+* PHP >= 7.2
 * [Composer](https://getcomposer.org/) (to install this library)
 
 ## Usage
