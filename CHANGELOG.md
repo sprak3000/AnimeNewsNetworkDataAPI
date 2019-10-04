@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.0
+This release bumps the PHP version requirement to PHP 7.2 or higher. It also updates to the
+latest API URL available.
+
 ## 1.0.0
 This release moves the library into using PHP 7:
 
