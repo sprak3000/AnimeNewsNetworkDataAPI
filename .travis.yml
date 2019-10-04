@@ -14,7 +14,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - ./vendor/bin/phpunit --bootstrap test/phpunit/bootstrap.php test/phpunit/ --coverage-text --coverage-clover build/logs/clover.xml"
+  - "./vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml"
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build  -t clover --exit-code $TRAVIS_TEST_RESULT; fi
 notifications:
   on_success: never
