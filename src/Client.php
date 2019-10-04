@@ -19,7 +19,7 @@ use GuzzleHttp\Command\Model;
  */
 class Client extends GuzzleClient
 {
-    const DEFAULT_API_URL = 'http://cdn.animenewsnetwork.com/encyclopedia/api.xml';
+    const DEFAULT_API_URL = 'https://cdn.animenewsnetwork.com/encyclopedia/api.xml';
 
     /**
      * Constructor

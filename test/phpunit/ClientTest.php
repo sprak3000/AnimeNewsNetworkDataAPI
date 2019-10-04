@@ -34,6 +34,6 @@ class ClientTest extends TestCase
 
         $this->assertInstanceOf('GuzzleHttp\Psr7\Uri', $base);
         $this->assertEquals('cdn.animenewsnetwork.com', $host);
-        $this->assertEquals('http://cdn.animenewsnetwork.com/encyclopedia/api.xml', $uri);
+        $this->assertEquals('https://cdn.animenewsnetwork.com/encyclopedia/api.xml', $uri);
     }
 }
