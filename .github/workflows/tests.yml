@@ -34,6 +34,3 @@ jobs:
         if: "matrix.php == '8.0'"
       - run: composer update --no-progress ${{ matrix.composer-flags }}
       - run: vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
-        if: ${{ !matrix.coverage }}
-      - run: vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
-        if: ${{ matrix.coverage }}
