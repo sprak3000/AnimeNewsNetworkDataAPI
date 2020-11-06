@@ -1,5 +1,5 @@
 # Anime News Network Data Client
-[![Build Status](https://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI.svg?branch=master)](https://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI)
+![Tests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/workflows/Tests/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/maintainability)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/test_coverage)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/test_coverage)
 
@@ -25,8 +25,7 @@ $anime = $client->getAnime(['anime' => '16148'])->toArray();
 $manga = $client->getManga(['manga' => '4199'])->toArray();
 ```
 
-### Errors
-
+### Detecting API Errors
 Unfortunately, the ANN API does not return a non 200 HTTP response code for an invalid / not found ID. To check for an
 error, look for a `warning` key in the result array.
 
@@ -38,16 +37,13 @@ None at this time.
 composer require sprak3000/AnimeNewsNetworkDataAPI
 ```
 
-## Travis CI
-
-This project uses [Travis CI](https://travis-ci.org/sprak3000/AnimeNewsNetworkDataAPI) for build and continuous integration.
+## Continuous Integration
+This project uses [GitHubActions](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions) for build and continuous integration.
 
 ## Documentation
-
 All documentation can be found in the [doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc) folder.
 
 ## Contributing
-
 * [Getting Started](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md)
 * [Bug Reports](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#bug-reports)
 * [Feature Requests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#feature-requests)
