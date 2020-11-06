@@ -1,5 +1,5 @@
 # Anime News Network Data Client
-![Tests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/workflows/Tests/badge.svg)
+[![Tests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/workflows/Tests/badge.svg)](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions?query=workflow%3ATests)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/maintainability)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/test_coverage)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/test_coverage)
 
