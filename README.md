@@ -14,7 +14,7 @@ When using this client to retrieve data, you must still abide by the ANN API ter
 source of the data and link to Anime News Network on every page that incorporates data from the API.
 
 ## Requires
-* PHP >= 7.2
+* PHP ^8.0
 * [Composer](https://getcomposer.org/) (to install this library)
 
 ## Usage

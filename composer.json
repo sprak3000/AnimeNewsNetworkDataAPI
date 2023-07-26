@@ -7,17 +7,13 @@
       "email": "sprak3000+github@gmail.com"
     }
   ],
-  "repositories": [{
-    "type": "vcs",
-    "url": "http://github.com/sprak3000/guzzle-services"
-  }],
   "require": {
-    "php": ">=7.2",
-    "guzzlehttp/guzzle": "6.*",
-    "guzzlehttp/guzzle-services": "1.*"
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "7.7.0",
+    "guzzlehttp/guzzle-services": "1.4.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "6.*"
+    "phpunit/phpunit": "10.2.6"
   },
   "autoload": {
     "psr-4": {
