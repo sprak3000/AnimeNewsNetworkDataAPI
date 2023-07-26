@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 3.0.0
+This release moves the library into using PHP 8.
+
 ## 2.1.0
 Migrating from Travis CI to GitHub actions for automatically running unit tests.
 

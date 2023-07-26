@@ -10,15 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['7.2', '7.3', '7.4']
+        php: ['8.0', '8.1', '8.2']
         coverage: [true]
         composer-flags: ['']
-        include:
-          - php: '8.0'
-            coverage: false
-            composer-flags: '--ignore-platform-req=php'
-          - php: '7.2'
-            coverage: false
     steps:
       - uses: actions/checkout@v2
       - uses: shivammathur/setup-php@v2
@@ -27,8 +21,5 @@ jobs:
           extensions: curl, mbstring
           coverage: pcov
           tools: composer:v2
-      - name: "Use PHPUnit 9.3+ on PHP 8"
-        run: composer require --no-update --dev phpunit/phpunit:^9.3
-        if: "matrix.php == '8.0'"
       - run: composer update --no-progress ${{ matrix.composer-flags }}
       - run: vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
