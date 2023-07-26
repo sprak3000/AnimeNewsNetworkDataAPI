@@ -21,5 +21,8 @@ jobs:
           extensions: curl, mbstring
           coverage: pcov
           tools: composer:v2
+      - name: "Use PHPUnit 9.3+ on PHP 8"
+        run: composer require --no-update --dev phpunit/phpunit:^9.3
+        if: "matrix.php == '8.0'"
       - run: composer update --no-progress ${{ matrix.composer-flags }}
       - run: vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
