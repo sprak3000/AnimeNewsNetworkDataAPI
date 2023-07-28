@@ -2,15 +2,15 @@
 
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test\GetAnime;
 
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 use sprak3000\AnimeNewsNetworkDataAPI\Test\DebugClient;
 use sprak3000\AnimeNewsNetworkDataAPI\Enum\Anime\Property;
 
 class IntegrationTest extends TestCase
 {
-    const VALID_ANIME_ID = '16148';
+    protected const VALID_ANIME_ID = '16148';
 
-    const INVALID_ANIME_ID = '-1';
+    protected const INVALID_ANIME_ID = '-1';
 
     /**
      * Given: A user querying for an anime
@@ -20,13 +20,11 @@ class IntegrationTest extends TestCase
      * @group Integration
      * @group internet
      * @small
-     *
      */
     public function testValidAnime()
     {
         $client = new DebugClient();
 
-        /** @var \GuzzleHttp\Command\Model $result */
         $result = $client->getAnime(['anime' => self::VALID_ANIME_ID]);
 
         $response = $client->mContainer[0]['response'];
@@ -34,7 +32,7 @@ class IntegrationTest extends TestCase
         $this->assertEquals('200', $response->getStatusCode());
 
         $checkKeys = function ($pAnime) {
-            /** Expected # of top level array keys */
+            // Expected # of top level array keys
             $this->assertCount(1, $pAnime);
 
             $this->assertArrayHasKey(Property::KEY_ANIME, $pAnime);
@@ -59,13 +57,11 @@ class IntegrationTest extends TestCase
      * @group Integration
      * @group internet
      * @small
-     *
      */
     public function testInvalidAnime()
     {
         $client = new DebugClient();
 
-        /** @var \GuzzleHttp\Command\Model $result */
         $result = $client->getAnime(['anime' => self::INVALID_ANIME_ID])->toArray();
 
         $this->assertArrayHasKey(Property::KEY_WARNING, $result);

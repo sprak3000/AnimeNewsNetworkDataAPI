@@ -1,4 +1,5 @@
 <?php
+
 date_default_timezone_set('UTC');
 
 /**
@@ -18,7 +19,7 @@ require $vendorRoot . 'vendor/autoload.php';
 $config_file = 'test/phpunit/config.php';
 
 if (file_exists($config_file)) {
-    require $config_file;
+    include $config_file;
 }
 
 return 0;

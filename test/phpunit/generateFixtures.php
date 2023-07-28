@@ -65,12 +65,12 @@ $titles = [
 /**
  * @param string $pData
  * @param string $pEndpoint
- * @param string $pId
+ * @param string | null $pId
  */
-$writeFile = function ($pData, $pEndpoint, $pId) {
+$writeFile = function (string $pData, string $pEndpoint, string | null $pId) {
     $filename = __DIR__ . '/Fixture/_encyclopedia_api.xml' . '(' . $pEndpoint;
 
-    if (null !== $pId) {
+    if ($pId !== null) {
         $filename .= '_' . $pId . ')';
     }
 
@@ -80,9 +80,9 @@ $writeFile = function ($pData, $pEndpoint, $pId) {
     file_put_contents($filename, $pData);
 };
 
-$apiUrl = Test\DebugClient::DEFAULT_API_URL;
+$apiUrl = DebugClient::DEFAULT_API_URL;
 
-$client = new Test\DebugClient($apiUrl);
+$client = new DebugClient($apiUrl);
 
 echo "\r\n\r\n================================\r\n";
 echo "Generating anime fixture data. \r\n";

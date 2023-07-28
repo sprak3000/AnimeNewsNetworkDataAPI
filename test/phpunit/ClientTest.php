@@ -2,7 +2,7 @@
 
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test;
 
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 use sprak3000\AnimeNewsNetworkDataAPI\Client;
 
 class ClientTest extends TestCase

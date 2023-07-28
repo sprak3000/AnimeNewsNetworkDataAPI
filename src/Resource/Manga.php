@@ -1,4 +1,5 @@
 <?php
+
 // Manga data
 $resources['operations']['getManga'] = [
     'httpMethod' => 'GET',
