@@ -1,4 +1,5 @@
 <?php
+
 // Anime data
 $resources['operations']['getAnime'] = [
     'httpMethod' => 'GET',

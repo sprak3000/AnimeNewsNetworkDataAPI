@@ -22,14 +22,14 @@ class DebugClient extends Client
      */
     public $mHistory;
 
-    public $mContainer = [];
+    public array $mContainer = [];
 
     /**
      * @param array $pOptions
      *
      * @return \GuzzleHttp\Client
      */
-    protected function CreateHttpClient(array $pOptions = []): \GuzzleHttp\Client
+    protected function createHttpClient(array $pOptions = []): \GuzzleHttp\Client
     {
         $mock = array_key_exists('mock', $pOptions) ? $pOptions['mock'] : null;
 
@@ -39,6 +39,6 @@ class DebugClient extends Client
 
         $pOptions['handler'] = $stack;
 
-        return parent::CreateHttpClient($pOptions);
+        return parent::createHttpClient($pOptions);
     }
 }

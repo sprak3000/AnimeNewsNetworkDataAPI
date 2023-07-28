@@ -19,27 +19,31 @@ use GuzzleHttp\Command\Model;
  */
 class Client extends GuzzleClient
 {
-    const DEFAULT_API_URL = 'https://cdn.animenewsnetwork.com/encyclopedia/api.xml';
+    public const DEFAULT_API_URL = 'https://cdn.animenewsnetwork.com/encyclopedia/api.xml';
 
     /**
      * Constructor
      *
      * @param string $pApiUrl Base API URL
-     * @param array $pOptions
+     * @param array<string> $pOptions
      *
      * @throws InvalidArgumentException
      */
-    public function __construct($pApiUrl = self::DEFAULT_API_URL, $pOptions = [])
+    public function __construct(string $pApiUrl = self::DEFAULT_API_URL, $pOptions = [])
     {
-        parent::__construct($this->CreateHttpClient($pOptions), $this->ConfigureResourceDescriptions($pApiUrl));
+        parent::__construct($this->createHttpClient($pOptions), $this->configureResourceDescriptions($pApiUrl));
     }
 
-    protected function CreateHttpClient(array $pOptions = [])
+    /**
+     * @param array<string> $pOptions
+     * @return HttpClient
+     */
+    protected function createHttpClient(array $pOptions = []): HttpClient
     {
         return new HttpClient($pOptions);
     }
 
-    protected function ConfigureResourceDescriptions($pApiUrl)
+    protected function configureResourceDescriptions(string $pApiUrl): Description
     {
         $resources = [
             'baseUri' => $pApiUrl,
