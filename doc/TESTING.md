@@ -58,7 +58,7 @@ service calls, it somewhat reduces the need for integration tests, though
 certainly not completely.
 
 Whenever you want to run the existing integration tests, you can execute the
-following command in your shell shell.
+following command in your shell.
 
 ```shell
   task integration-tests
@@ -66,11 +66,13 @@ following command in your shell shell.
 
 ## Unit tests
 
-The unit tests are for testing individual units of source code. For this project, we are effectively testing the service
-description file since we are built on Guzzle, and it already has its own unit tests. This basically means all we really
-need to test are our integration points.
+The unit tests are for testing individual units of source code. For this
+project, we are effectively testing the service description file since we are
+built on Guzzle, and it already has its own unit tests. This basically means all
+we really need to test are our integration points.
 
-Whenever you want to run the existing unit tests, you can execute the following command in your shell.
+Whenever you want to run the existing unit tests, you can execute the following
+command in your shell.
 
 ```shell
   task unit-tests
@@ -78,8 +80,9 @@ Whenever you want to run the existing unit tests, you can execute the following 
 
 ### Generating fixtures
 
-The unit tests depend on having fixtures available to return; we have samples checked into the repo. If you find you
-need to regenerate them, you can run the following script from the root of the project:
+The unit tests depend on having fixtures available to return; we have samples
+checked into the repo. If you find you need to regenerate them, you can run the
+following script from the root of the project:
 
 ```shell
   task generate-fixtures

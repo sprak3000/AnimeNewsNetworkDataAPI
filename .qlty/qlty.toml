@@ -83,9 +83,6 @@ mode = "comment"
 name = "php-cs-fixer"
 
 [[plugin]]
-name = "prettier"
-
-[[plugin]]
 name = "ripgrep"
 mode = "comment"
 
