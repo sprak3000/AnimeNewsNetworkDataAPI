@@ -4,12 +4,14 @@
 [![Maintainability](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI/maintainability.svg)](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI)
 [![Code Coverage](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI/coverage.svg)](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI)
 
-This is a PHP client wrapper for the [Anime News Network](http://www.animenewsnetwork.com/encyclopedia/api.php) data
-API. If you are interested in contributing back to this project, feel free to read the *Contributing* documentation
-below.
+This is a PHP client wrapper for the
+[Anime News Network](http://www.animenewsnetwork.com/encyclopedia/api.php) data
+API. If you are interested in contributing back to this project, feel free to
+read the *Contributing* documentation below.
 
-**NOTE:** 
-When using this client to retrieve data, you must still abide by the ANN API terms of service:
+**NOTE:**
+When using this client to retrieve data, you must still abide by the ANN API
+terms of service:
 
 > When using this API to display information on a public website, you must list Anime News Network as the
 source of the data and link to Anime News Network on every page that incorporates data from the API.
@@ -20,6 +22,7 @@ source of the data and link to Anime News Network on every page that incorporate
 * [Composer](https://getcomposer.org/) (to install this library)
 
 ## Usage
+
 ```php
 <?php
 $client = new sprak3000\AnimeNewsNetworkDataAPI\Client();
@@ -28,24 +31,32 @@ $manga = $client->getManga(['manga' => '4199'])->toArray();
 ```
 
 ### Detecting API Errors
-Unfortunately, the ANN API does not return a non 200 HTTP response code for an invalid / not found ID. To check for an
-error, look for a `warning` key in the result array.
+
+Unfortunately, the ANN API does not return a non 200 HTTP response code for an
+invalid / not found ID. To check for an error, look for a `warning` key in the
+result array.
 
 ### Known Limitations / Issues
+
 None at this time.
 
 ## Installing via Composer
-```
+
+```shell
 composer require sprak3000/AnimeNewsNetworkDataAPI
 ```
 
 ## Continuous Integration
 
-This project uses [GitHubActions](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions) for build and continuous integration.
+This project uses
+[GitHubActions](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions)
+for build and continuous integration.
 
 ## Documentation
 
-All documentation can be found in the [doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc) folder.
+All documentation can be found in the
+[doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc)
+folder.
 
 ## Contributing
 
