@@ -69,7 +69,7 @@ class Client extends GuzzleClient
          * operations Guzzle can provide through this client.
          */
         foreach (glob(__DIR__ . '/Resource/*.php') as $file) {
-            require $file;
+            require_once $file;
         }
 
         return new Description($resources);
