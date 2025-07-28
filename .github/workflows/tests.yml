@@ -24,5 +24,5 @@ jobs:
       - run: vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
       - uses: qltysh/qlty-action/coverage@v1
         with:
-          token: {{secrets.QLTY_COVERAGE_TOKEN}}
+          token: ${{secrets.QLTY_COVERAGE_TOKEN}}
           files: build/logs/clover.xml
