@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.1.0
+This release updates the supported version of PHP to 8.3 and later along with updating the project dependencies.
+Project file structure also updated for better support of latest PHPUnit best practices. Documentation updated to
+reflect these changes.
+
 ## 3.0.0
 This release moves the library into using PHP 8.
 

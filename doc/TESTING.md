@@ -10,11 +10,11 @@ First and foremost, you will always want to make sure that when you run
 phpunit for this library that you bootstrap it so that it is able to
 autoload classes.
 
-For example, if you were to run all of the unit and integration tests at once,
+For example, if you were to run all the unit and integration tests at once,
 your command would look like this:
 
 ```bash
-  phpunit --bootstrap test/phpunit/bootstrap.php test/phpunit/
+  vendor/bin/phpunit --bootstrap test/bootstrap.php
 ```
 
 ## Debug Client
@@ -58,7 +58,7 @@ Whenever you want to run the existing integration tests, you can execute the
 following command in your bash shell.
 
 ```bash
-  phpunit --bootstrap test/phpunit/bootstrap.php --group Integration test/phpunit/
+  vendor/bin/phpunit --bootstrap test/bootstrap.php --testsuite integration
 ```
 
 ## Unit Tests
@@ -70,7 +70,7 @@ need to test are our integration points.
 Whenever you want to run the existing unit tests, you can execute the following command in your bash shell.
 
 ```bash
-  phpunit --bootstrap test/phpunit/bootstrap.php --group Unit test/phpunit/
+  vendor/bin/phpunit --bootstrap test/bootstrap.php --testsuite unit
 ```
 
 ### Generating Fixtures
@@ -79,6 +79,5 @@ The unit tests depend on having fixtures available to return; we have samples ch
 need to regenerate them, you can run the following script from the root of the project:
 
 ```bash
-  $ chmod +x test/phpunit/generateFixtures.php
-  $ ./test/phpunit/generateFixtures.php
+  $ ./test/generateFixtures.php
 ```
