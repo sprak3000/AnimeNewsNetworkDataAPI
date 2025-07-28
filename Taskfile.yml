@@ -1,6 +1,6 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 tasks:
   default:
@@ -10,8 +10,8 @@ tasks:
 
   lint:
     cmds:
-      - vendor/bin/phpcs --standard=PSR12 ./src ./test
-      - vendor/bin/phpcbf --standard=PSR12 ./src ./test
+      - vendor/bin/phpcs ./src ./test
+      - vendor/bin/phpcbf ./src ./test
       - vendor/bin/phpstan analyse src test
 
   # Run all tests.
