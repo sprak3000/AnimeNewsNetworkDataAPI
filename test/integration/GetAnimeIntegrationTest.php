@@ -2,11 +2,14 @@
 
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test\GetAnime;
 
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\TestCase;
 use sprak3000\AnimeNewsNetworkDataAPI\Test\DebugClient;
 use sprak3000\AnimeNewsNetworkDataAPI\Enum\Anime\Property;
 
-class IntegrationTest extends TestCase
+#[Small]
+class GetAnimeIntegrationTest extends TestCase
 {
     protected const VALID_ANIME_ID = '16148';
 
@@ -17,10 +20,8 @@ class IntegrationTest extends TestCase
      * When: API is queried for a valid anime ID
      * Then: Expect a 200 response and all valid keys
      *
-     * @group Integration
-     * @group internet
-     * @small
      */
+    #[Group('internet')]
     public function testValidAnime()
     {
         $client = new DebugClient();
@@ -54,10 +55,9 @@ class IntegrationTest extends TestCase
      * When: API is queried for an invalid anime ID
      * Then: Expect a warning key in the result array
      *
-     * @group Integration
-     * @group internet
-     * @small
      */
+    #[Group('Integration')]
+    #[Group('internet')]
     public function testInvalidAnime()
     {
         $client = new DebugClient();

@@ -2,12 +2,15 @@
 
 namespace sprak3000\AnimeNewsNetworkDataAPI\Test\GetAnime;
 
-use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\Small;
+use PHPUnit\Framework\TestCase;
 use sprak3000\AnimeNewsNetworkDataAPI\Test\DebugClient;
 
-class UnitTest extends TestCase
+#[Small]
+class GetAnimeUnitTest extends TestCase
 {
     protected const ANIME_ID = '16148';
 
@@ -16,10 +19,8 @@ class UnitTest extends TestCase
      * When: API is queried for a specific title
      * Then: Expect a 200 response
      *
-     * @group Unit
-     * @group internet
-     * @small
      */
+    #[Group('internet')]
     public function testGetAnime()
     {
         $mock = new MockHandler(
