@@ -1,0 +1,60 @@
+name: Code Quality
+
+on:
+  pull_request: ~
+
+jobs:
+  lint:
+    name: Lint on ${{ matrix.php }} ${{ matrix.composer-flags }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.3', '8.4']
+        coverage: [true]
+        composer-flags: ['']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: curl, mbstring
+          coverage: pcov
+          tools: composer:v2
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+      - name: Composer update
+        run: composer update --no-progress ${{ matrix.composer-flags }}
+      - name: Lint
+        run: task lint
+
+  phpunit:
+    name: PHPUnit on ${{ matrix.php }} ${{ matrix.composer-flags }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.3', '8.4']
+        coverage: [true]
+        composer-flags: ['']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: curl, mbstring
+          coverage: pcov
+          tools: composer:v2
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+      - name: Composer update
+        run: composer update --no-progress ${{ matrix.composer-flags }}
+      - name: Run tests
+        run: task tests-code-coverage
+      - name: Upload coverage report
+        uses: qltysh/qlty-action/coverage@v1
+        with:
+          token: ${{secrets.QLTY_COVERAGE_TOKEN}}
+          files: build/logs/clover.xml

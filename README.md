@@ -1,4 +1,5 @@
 # Anime News Network Data Client
+
 [![Tests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/workflows/Tests/badge.svg)](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions?query=workflow%3ATests)
 [![Maintainability](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI/maintainability.svg)](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI)
 [![Code Coverage](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI/coverage.svg)](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI)
@@ -13,8 +14,9 @@ When using this client to retrieve data, you must still abide by the ANN API ter
 > When using this API to display information on a public website, you must list Anime News Network as the
 source of the data and link to Anime News Network on every page that incorporates data from the API.
 
-## Requires
-* PHP ^8.0
+## Requirements
+
+* PHP ^8.3
 * [Composer](https://getcomposer.org/) (to install this library)
 
 ## Usage
@@ -38,12 +40,15 @@ composer require sprak3000/AnimeNewsNetworkDataAPI
 ```
 
 ## Continuous Integration
+
 This project uses [GitHubActions](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions) for build and continuous integration.
 
 ## Documentation
+
 All documentation can be found in the [doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc) folder.
 
 ## Contributing
+
 * [Getting Started](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md)
 * [Bug Reports](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#bug-reports)
 * [Feature Requests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#feature-requests)

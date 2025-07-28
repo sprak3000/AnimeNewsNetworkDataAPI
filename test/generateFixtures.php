@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use sprak3000\AnimeNewsNetworkDataAPI\Test;
+use sprak3000\AnimeNewsNetworkDataAPI\Test\DebugClient;
 
 require 'bootstrap.php';
 

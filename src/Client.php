@@ -6,16 +6,15 @@ use InvalidArgumentException;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use GuzzleHttp\Command\Guzzle\Description;
-use GuzzleHttp\Command\Model;
 
 /**
  * Web service client for Anime News Network data
  *
  * @package sprak3000/AnimeNewsNetworkDataAPI
  *
- * @method Model getAnime() getAnime(array $pOptions)
- * @method Model getManga() getManga(array $pOptions)
- * @method Model getTitle() getTitle(array $pOptions)
+ * @method getAnime() getAnime(array $pOptions)
+ * @method getManga() getManga(array $pOptions)
+ * @method getTitle() getTitle(array $pOptions)
  */
 class Client extends GuzzleClient
 {

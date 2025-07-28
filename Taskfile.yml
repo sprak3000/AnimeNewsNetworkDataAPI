@@ -1,0 +1,37 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: lint
+      - task: tests
+
+  lint:
+    cmds:
+      - vendor/bin/phpcs --standard=PSR12 ./src ./test
+      - vendor/bin/phpcbf --standard=PSR12 ./src ./test
+      - vendor/bin/phpstan analyse src test
+
+  # Run all tests.
+  tests:
+    cmds:
+      - vendor/bin/phpunit
+
+  # Run all tests with code coverage.
+  tests-code-coverage:
+    cmds:
+      - vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
+
+  unit-tests:
+    cmds:
+      - vendor/bin/phpunit --testsuite unit
+
+  integration-tests:
+    cmds:
+      - vendor/bin/phpunit --testsuite integration
+
+  generate-fixtures:
+    cmds:
+      - test/generateFixtures.php

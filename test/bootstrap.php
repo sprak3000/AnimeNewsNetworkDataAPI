@@ -16,7 +16,7 @@ if (false !== array_key_exists('VENDOR_ROOT', $_SERVER) || !empty($_SERVER['VEND
 // Setup autoloading
 require $vendorRoot . 'vendor/autoload.php';
 
-$config_file = 'test/phpunit/config.php';
+$config_file = 'test/config.php';
 
 if (file_exists($config_file)) {
     include $config_file;
