@@ -5,7 +5,7 @@ on:
 
 jobs:
   lint:
-    name: Lint on ${{ matrix.php }} ${{ matrix.composer-flags }}
+    name: Lint (PHP ${{ matrix.php }} ${{ matrix.composer-flags }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,7 +30,7 @@ jobs:
         run: task lint
 
   phpunit:
-    name: PHPUnit on ${{ matrix.php }} ${{ matrix.composer-flags }}
+    name: Tests (PHP ${{ matrix.php }} ${{ matrix.composer-flags }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
