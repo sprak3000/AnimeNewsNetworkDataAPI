@@ -18,7 +18,7 @@ use GuzzleHttp\Middleware;
 class DebugClient extends Client
 {
     /**
-     * @var History $mHistory
+     * @var $mHistory
      */
     public $mHistory;
 

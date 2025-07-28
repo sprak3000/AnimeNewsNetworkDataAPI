@@ -6,7 +6,6 @@ use sprak3000\AnimeNewsNetworkDataAPI\Enum\AbstractProperty;
 
 class Property extends AbstractProperty
 {
-
     public const KEY_MANGA = 'manga';
     public const KEY_RELEASE = 'release';
     public const KEY_TYPE_V1 = 'type';

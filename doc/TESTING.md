@@ -1,4 +1,5 @@
 # Testing
+
 As mentioned in the [contributing guidelines](CONTRIBUTING.md) document, all
 pull requests related to new features or bug fixes should contain relevant
 tests, that pass.
@@ -13,18 +14,19 @@ autoload classes.
 For example, if you were to run all the unit and integration tests at once,
 your command would look like this:
 
-```bash
-  vendor/bin/phpunit
+```shell
+  task tests
 ```
 
-## Debug Client
+## Debug client
+
 Most tests written for this library will require the Debug Client. The
 primary difference between the release client and the debug client is
-that the debug client attaches Guzzle's Subscriber History listener on the
+the debug client attaches Guzzle's Subscriber History listener on the
 Guzzle Http client event emitter.
 
 This listener allows us to get additional information back from the client
-by accessing the DebugClient's mHistory property.
+by accessing the DebugClient's `mHistory` property.
 
 For example, if we wanted to get the last response from a DebugClient we
 would execute the following code in our scripts:
@@ -33,15 +35,16 @@ would execute the following code in our scripts:
   $response = $client->mHistory->getLastResponse();
 ```
 
-The response object return has the ability to provide the Headers returned
+The response object return has the ability to provide the headers returned
 by the request as well as the status code, effective url that was called
-and th body of the response in its original format.
+and the body of the response in its original format.
 
 All of these methods are invaluable when writing unit tests. To see these
-types of methods in action, review the `/test/phpunit/GetAllChampions/IntegrationTest.php`
+types of methods in action, review the `/test/unit/GetAnimeUnitTest.php`
 file and the tests contained in it.
 
-## Integration Tests
+## Integration tests
+
 For this project "Integration Tests" are small tests that call out to the
 live service and perform a handful of tests. Usually you only want to try
 from one to five tests, generally around successful or known failure stats from
@@ -55,29 +58,29 @@ service calls, it somewhat reduces the need for integration tests, though
 certainly not completely.
 
 Whenever you want to run the existing integration tests, you can execute the
-following command in your bash shell.
+following command in your shell shell.
 
-```bash
-  vendor/bin/phpunit --testsuite integration
+```shell
+  task integration-tests
 ```
 
-## Unit Tests
+## Unit tests
 
 The unit tests are for testing individual units of source code. For this project, we are effectively testing the service
 description file since we are built on Guzzle, and it already has its own unit tests. This basically means all we really
 need to test are our integration points.
 
-Whenever you want to run the existing unit tests, you can execute the following command in your bash shell.
+Whenever you want to run the existing unit tests, you can execute the following command in your shell.
 
-```bash
-  vendor/bin/phpunit --testsuite unit
+```shell
+  task unit-tests
 ```
 
-### Generating Fixtures
+### Generating fixtures
 
 The unit tests depend on having fixtures available to return; we have samples checked into the repo. If you find you
 need to regenerate them, you can run the following script from the root of the project:
 
-```bash
-  $ ./test/generateFixtures.php
+```shell
+  task generate-fixtures
 ```
