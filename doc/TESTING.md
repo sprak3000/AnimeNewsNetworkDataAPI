@@ -14,7 +14,7 @@ For example, if you were to run all the unit and integration tests at once,
 your command would look like this:
 
 ```bash
-  vendor/bin/phpunit --bootstrap test/bootstrap.php
+  vendor/bin/phpunit
 ```
 
 ## Debug Client
@@ -58,7 +58,7 @@ Whenever you want to run the existing integration tests, you can execute the
 following command in your bash shell.
 
 ```bash
-  vendor/bin/phpunit --bootstrap test/bootstrap.php --testsuite integration
+  vendor/bin/phpunit --testsuite integration
 ```
 
 ## Unit Tests
@@ -70,7 +70,7 @@ need to test are our integration points.
 Whenever you want to run the existing unit tests, you can execute the following command in your bash shell.
 
 ```bash
-  vendor/bin/phpunit --bootstrap test/bootstrap.php --testsuite unit
+  vendor/bin/phpunit --testsuite unit
 ```
 
 ### Generating Fixtures
