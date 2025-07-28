@@ -1,7 +1,7 @@
 # Anime News Network Data Client
 [![Tests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/workflows/Tests/badge.svg)](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions?query=workflow%3ATests)
-[![Maintainability](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/maintainability)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8f0ca6dec4db4f17da14/test_coverage)](https://codeclimate.com/github/sprak3000/AnimeNewsNetworkDataAPI/test_coverage)
+[![Maintainability](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI/maintainability.svg)](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI)
+[![Code Coverage](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI/coverage.svg)](https://qlty.sh/gh/sprak3000/projects/AnimeNewsNetworkDataAPI)
 
 This is a PHP client wrapper for the [Anime News Network](http://www.animenewsnetwork.com/encyclopedia/api.php) data
 API. If you are interested in contributing back to this project, feel free to read the *Contributing* documentation
