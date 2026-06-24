@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.3.0
+
+Add PHP 8.5 to CI pipeline and address PHP 8.5 related lint errors. Update
+dependencies to address vulnerabilities.
+
 ## 3.2.0
 
 Add in [task](https://taskfile.dev) to make running tests, linting, etc. easier.
