@@ -56,7 +56,6 @@ class GetAnimeIntegrationTest extends TestCase
      * Then: Expect a warning key in the result array
      *
      */
-    #[Group('Integration')]
     #[Group('internet')]
     public function testInvalidAnime()
     {
