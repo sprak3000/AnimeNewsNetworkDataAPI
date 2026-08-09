@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.4.2
+
+Update CI dependencies and fix final code coverage path reference.
+
 ## 3.4.1
 
 Fixing `master` references to point to `main` including code coverage setup.
