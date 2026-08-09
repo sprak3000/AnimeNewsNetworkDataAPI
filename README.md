@@ -55,12 +55,12 @@ for build and continuous integration.
 ## Documentation
 
 All documentation can be found in the
-[doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc)
+[doc](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/main/doc)
 folder.
 
 ## Contributing
 
-* [Getting Started](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md)
-* [Bug Reports](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#bug-reports)
-* [Feature Requests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#feature-requests)
-* [Pull Requests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/master/doc/CONTRIBUTING.md#pull-requests)
+* [Getting Started](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/main/doc/CONTRIBUTING.md)
+* [Bug Reports](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/main/doc/CONTRIBUTING.md#bug-reports)
+* [Feature Requests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/main/doc/CONTRIBUTING.md#feature-requests)
+* [Pull Requests](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/blob/main/doc/CONTRIBUTING.md#pull-requests)
