@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.4.0
+
+Upgrading dependencies and code coverage pipeline.
+
 ## 3.3.0
 
 Add PHP 8.5 to CI pipeline and address PHP 8.5 related lint errors. Update
