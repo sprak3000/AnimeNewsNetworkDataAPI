@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.4.3
+
+Locking down CI configuration and fixing missed CI dependency updates.
+
 ## 3.4.2
 
 Update CI dependencies and fix final code coverage path reference.
