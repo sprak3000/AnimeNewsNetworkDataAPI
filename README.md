@@ -49,7 +49,7 @@ composer require sprak3000/AnimeNewsNetworkDataAPI
 ## Continuous Integration
 
 This project uses
-[GitHubActions](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions)
+[GitHub Actions](https://github.com/sprak3000/AnimeNewsNetworkDataAPI/actions)
 for build and continuous integration.
 
 ## Documentation
