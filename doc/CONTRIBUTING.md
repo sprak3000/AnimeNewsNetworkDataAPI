@@ -102,8 +102,8 @@ in the project:
 2. If you cloned a while ago, get the latest changes from upstream:
 
    ```shell
-   git checkout master
-   git pull upstream master
+   git checkout main
+   git pull upstream main
    ```
 
 3. Create a new topic branch (off the main project development branch) to
@@ -128,7 +128,7 @@ in the project:
    branch:
 
    ```shell
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream main
    ```
 
 7. Push your topic branch up to your fork:

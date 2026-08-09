@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.4.1
+
+Fixing `master` references to point to `main` including code coverage setup.
+
 ## 3.4.0
 
 Upgrading dependencies and code coverage pipeline.
