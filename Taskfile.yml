@@ -22,7 +22,7 @@ tasks:
   # Run all tests with code coverage.
   tests-code-coverage:
     cmds:
-      - vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
+      - vendor/bin/phpunit --coverage-text --coverage-clover coverage/clover.xml
 
   unit-tests:
     cmds:
