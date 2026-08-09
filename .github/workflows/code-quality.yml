@@ -6,6 +6,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     name: Lint (PHP ${{ matrix.php }} ${{ matrix.composer-flags }})
@@ -16,7 +19,7 @@ jobs:
         coverage: [true]
         composer-flags: ['']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
@@ -24,7 +27,7 @@ jobs:
           coverage: pcov
           tools: composer:v2
       - name: Install Task
-        uses: arduino/setup-task@v2
+        uses: arduino/setup-task@v3
         with:
           version: 3.x
       - name: Composer update
